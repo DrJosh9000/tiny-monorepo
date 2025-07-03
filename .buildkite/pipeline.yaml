@@ -1,0 +1,5 @@
+steps:
+  - command: echo 'this one always runs'
+  
+  - if_changed: "{go.mod,go.sum,*.go}"
+    command: go build ./...
