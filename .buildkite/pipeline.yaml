@@ -4,7 +4,7 @@ steps:
   - if_changed:
       - go.mod
       - go.sum
-      - *.go
+      - "*.go"
     if_changed_exclude:
       - exclude.go
     command: go build ./...
