@@ -1,5 +1,10 @@
 steps:
   - command: echo 'this one always runs'
-  
-  - if_changed: "{go.mod,go.sum,*.go}"
+
+  - if_changed:
+      - go.mod
+      - go.sum
+      - *.go
+    if_changed_exclude:
+      - exclude.go
     command: go build ./...
