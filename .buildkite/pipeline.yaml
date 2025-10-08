@@ -4,6 +4,7 @@ steps:
   - if_changed:
       - go.mod
       - go.sum
+      - null
       - "*.go"
     if_changed_exclude:
       - exclude.go
